@@ -1,0 +1,7 @@
+MyWidget. An easy way to add widgets to your windows desktop!
+
+In today's modern lifestyle, where many of us spend significant amounts of time in front of screens, cultivating a pleasant and cozy environment is essential for our overall well-being. Such an environment not only offers respite from the digital world but also provides numerous benefits across various aspects of life. From reducing stress levels and promoting mental clarity to enhancing creativity, productivity, and overall happiness, a welcoming and comfortable space serves as a sanctuary where we can recharge, rejuvenate, and thrive amidst the demands of contemporary living.
+
+That is what we try to create here! A widget app that aims to provide the ultimate packet of unique and highly customisable widgets that are made up from control panels, clocks, docks and more!
+
+Provide a more stylish, unique and cozy environment to make your Windows desktop more...you with MyWidget!
