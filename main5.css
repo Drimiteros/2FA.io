@@ -12,7 +12,7 @@ a{
 
 body{
 	font-family: 'Poppins', sans-serif;
-	background-color: #ffff;
+	background: linear-gradient(to left, rgba(109, 103, 103, 0), rgb(181, 232, 147)),#f0f0f0;
 	animation: fadeIn 1s ease-in-out forwards;
 	align-items: center;
 }

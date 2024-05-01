@@ -12,7 +12,7 @@ a{
 
 body{
 	font-family: 'Poppins', sans-serif;
-	background-color: #ffff;
+	background: linear-gradient(to left, rgba(109, 103, 103, 0), rgb(181, 232, 147)),#f0f0f0;
 	animation: fadeIn 1s ease-in-out forwards;
 	align-items: center;
 }
@@ -76,12 +76,11 @@ nav{
 
 .btn{
 	height: 35px;
-	padding: 0.1rem 0.5rem;
+	font-size: 1rem;
 	border-radius: 10px;
 	cursor: pointer;
 	transition: all 0.3s ease;
-	outline: 2px solid #34eb95;
-	color: #34eb95;
+	color: #ffff;
 	background-color: #2d302f;
 }
 
@@ -90,10 +89,8 @@ nav{
 	height: 35px;
 	padding: 0.1rem 0.5rem;
 	border-radius: 10px;
-	background-color: #34eb95;
-	color: rgb(0, 0, 0, 1.0);
+	color: #34eb95;
 	cursor: pointer;
-	outline: 2px solid #34eb95;
 	transition: all 0.3s ease;
 }
 
@@ -148,9 +145,30 @@ nav{
 }
 
 .container{
-	display: flex;
 	align-items:center;
 	justify-content: space-evenly;
+}
+
+.gradient-content{
+	padding: 3rem;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 0 10px 10px 0;
+	align-items:center;
+	justify-content: center;
+	max-width:37rem;
+	max-height: 30rem;
+}
+
+.content2{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.gradient-outline{
+	outline: solid #2d302f;
+	background-color: #2d302f;
+	outline: 2px;
+	padding-top: 20px;
 }
 
 .button_content{
@@ -159,45 +177,21 @@ nav{
 	justify-content:center;
 }
 
-.blur{
-	box-shadow: 0 0 1900px 80px #ffc4008c;
-	margin-left: -10rem;
-}
-
-.blur2{
-	box-shadow: 0 0 1900px 180px #00ff8036;
-	margin-left: 50rem;
-}
-
-.blur3{
-	box-shadow: 0 0 1900px 80px #00a2ff;
-	margin-left: 70rem;
-}
-
-.blur4{
-	box-shadow: 0 0 1900px 180px #ff000049;
-	margin-left: 60rem;
-}
-
-.blur5{
-	box-shadow: 0 0 1900px 180px #ff00d42d;
-	margin-left: 86rem;
-}
-
-.blur6{
-	box-shadow: 0 0 1900px 180px #ff00d42d;
-	margin-left: 60rem;
-}
-
-.blur7{
-	box-shadow: 0 0 1900px 180px #ff00b32d;
-	margin-left: -10rem;
+.gradient-outline2{
+	max-width: 800px;
+	padding: 1.4rem;
+	outline: solid #535857;	
+	background-color: #535857;
+	margin: 0 auto;
+	border-radius: 10px;
 }
 
 img{
-	width: 63.5%;
+	max-width: 51rem;
+	max-height: 30rem;
 	display: flex;
 	justify-content: center;
+	border-radius: 10px 0 0 10px;
 }
 
 .image{
@@ -207,27 +201,27 @@ img{
 }
 
 header .content h3{
-	color: #969696;
+	color: #2d302f;
 	justify-content: center;
 	display: flex;
 }
 
 header .content h1{
-	color: 333333;
+	color: #666666;
 	font-size: 5rem;
 	justify-content: center;
 	display: flex;
 }
 
 header .content h2{
-	color: 333333;
+	color: #666666;
 	font-size: 3rem;
 	justify-content: center;
 	display: flex;
 }
 
 header .content a{
-	color: 333333;
+	color: #666666;
 	font-size: 1.5rem;
 	font-weight: 1;
 	justify-content: center;
