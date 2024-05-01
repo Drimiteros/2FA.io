@@ -1,0 +1,264 @@
+*{
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+	background-color: rgb(0, 0, 0, 0.8);
+	animation: fadeIn 1s ease-in-out forwards;
+	align-items: center;
+}
+
+@keyframes fadeIn {
+    0% 
+    {
+        opacity: 0;
+    }
+    100% 
+    {
+        opacity: 1;
+    }
+}
+
+.nav-logo{
+	scale: 50%;
+}
+
+nav{
+	margin: none;
+	padding: 1.2rem 2rem;
+	display: flex;
+	justify-content: center;
+	background-color: rgb(0, 0, 0, 0);
+}
+
+.nav-links{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+}
+.nav-btn{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+}
+
+.link a{
+	position: relative;
+	padding-bottom: 0.75rem;
+	color: #ffffff;
+}
+
+.link a::after{
+	content: "";
+	position: absolute;
+	height: 5px;
+	border-radius: 10rem;
+	width: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #00fff2;
+	transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+	width: 70%;
+}
+
+.link2 a{
+	position: relative;
+	padding-bottom: 0.75rem;
+	color: #ffffff;
+}
+
+.btn{
+	height: 35px;
+	padding: 0.1rem 0.5rem;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	outline: 2px solid #34eb95;
+	color: #34eb95;
+	background-color: #2d302f;
+}
+
+.btn:hover{
+	outline: 0px solid #34eb95;
+	height: 35px;
+	padding: 0.1rem 0.5rem;
+	border-radius: 10px;
+	background-color: #34eb95;
+	color: rgb(0, 0, 0, 1.0);
+	cursor: pointer;
+	outline: 2px solid #34eb95;
+	transition: all 0.3s ease;
+}
+
+.btn2{
+	height: 60px;
+	width: 200px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: #ffffff;
+	background-color: rgb(27, 27, 27);
+	font-size: 1.2rem;
+}
+
+.btn2:hover{
+	height: 70px;
+	width: 210px;
+	padding: 0.1rem 0.5rem;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: 1.2rem;
+}
+
+.btn3{
+	height: 60px;
+	width: 200px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: #ffff;
+	background-color: rgb(0, 0, 0, 0.8);
+	font-size: 1.2rem;
+	margin-left: 20px;
+}
+
+.btn3:hover{
+	height: 60px;
+	width: 200px;
+	outline: 0px solid #ff8c00;
+	padding: 0.1rem 0.5rem;
+	border-radius: 10px;
+	background-color: #ff8c00;
+	color: #ffff;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: 1.2rem;
+}
+
+.container{
+	display: flex;
+	align-items:center;
+	justify-content: space-evenly;
+}
+
+.container2{
+	background-color: white;
+	display: flex;
+	align-items:center;
+	justify-content: space-evenly;
+}
+
+.gradient-content{
+	margin-left: -15rem;
+	margin-bottom: -15rem;
+	padding: 3rem;
+	max-width: 35rem;
+	max-height: 43rem;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	align-items:center;
+	justify-content: center;
+	color: rgb(66, 66, 66);
+	box-shadow: 0 0 50px 6px #0000008c;
+}
+
+.button_content{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+
+img{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0 0 50px 6px #0000008c;
+}
+
+.image{
+	scale: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .content h3{
+	color: #969696;
+	justify-content: center;
+	display: flex;
+}
+
+header .content h1{
+	color: #ffffff;
+	font-size: 5rem;
+	justify-content: center;
+	display: flex;
+}
+
+header .content h2{
+	color: #ffffff;
+	font-size: 3rem;
+	justify-content: center;
+	display: flex;
+}
+
+header .content a{
+	color: #333333;
+	font-size: 1.5rem;
+	font-weight: 1;
+	justify-content: center;
+	display: flex;
+}
+
+header .content2 a{
+	color: #ffffff;
+	font-size: 1.5rem;
+	font-weight: 1;
+	justify-content: center;
+	display: flex;
+}
+
+header .content3 a{
+	color: #3a3a3a;
+	font-size: 1.3rem;
+	font-weight: 1;
+	justify-content: center;
+	display: flex;
+}
+
+.blur{
+	box-shadow: 0 0 19000px 40px #45a7a7c0;
+	animation: fadeIn2 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn2 {
+	0% 
+    {
+		margin-top: 28rem;
+    }
+	50% 
+    {
+		margin-top: 28rem;
+    }
+    100% 
+    {
+		margin-top: 6rem;
+    }
+}
