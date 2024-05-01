@@ -77,7 +77,6 @@ nav{
 .btn{
 	height: 35px;
 	font-size: 1rem;
-	border-radius: 10px;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	color: #ffff;
@@ -85,10 +84,8 @@ nav{
 }
 
 .btn:hover{
-	outline: 0px solid #34eb95;
 	height: 35px;
 	padding: 0.1rem 0.5rem;
-	border-radius: 10px;
 	color: #34eb95;
 	cursor: pointer;
 	transition: all 0.3s ease;
