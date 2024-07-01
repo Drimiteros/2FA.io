@@ -232,6 +232,15 @@ nav{
 	box-shadow: 0 0 50px 6px #0000008c;
 }
 
+.content2 {
+	align-items:center;
+	justify-content: center;
+	display: flex;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0 0 5px 6px #000000;
+}
+
 .content4{
 	padding-left: 6rem;
 	padding-right: 6rem;
