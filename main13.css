@@ -28,58 +28,69 @@ body{
     }
 }
 
-.nav-logo{
-	scale: 50%;
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.3rem 2rem;
+    background-color: rgb(0, 0, 0, 0.2);
+    color: #fff;
 }
 
-nav{
-	margin: none;
-	padding: 1.2rem 2rem;
-	display: flex;
-	justify-content: center;
-	background-color: rgb(0, 0, 0, 0.2);
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: none;
 }
 
-.nav-links{
-	list-style: none;
-	display: flex;
-	align-items: center;
-	gap: 3rem;
-}
-.nav-btn{
-	list-style: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 3rem;
+nav {
+    position: relative;
 }
 
-.link a{
-	position: relative;
-	padding-bottom: 0.75rem;
-	color: #ffffff;
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #ffffff;
 }
 
-.link a::after{
-	content: "";
-	position: absolute;
-	height: 5px;
-	border-radius: 10rem;
-	width: 0;
-	bottom: 0;
-	left: 0;
-	background-color: #00fff2;
-	transition: all 0.3s ease;
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-radius: 10rem;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #00fff2;
+    transition: all 0.3s ease;
 }
 
-.link a:hover::after{
-	width: 70%;
+.link a:hover::after {
+    width: 70%;
 }
 
-.link2 a{
-	position: relative;
-	padding-bottom: 0.75rem;
-	color: #ffffff;
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .btn{
@@ -208,30 +219,10 @@ nav{
 	justify-content: space-evenly;
 }
 
-hr {
-	margin-left: 0rem;
-	margin-right: 0rem;
-	border: none; /* Remove default border */
-	height: 1.6px;  /* Set the thickness */
-	background-color: #000; /* Set the color */
-}
-
 .gradient-content{
 	padding: 3rem;
-	max-width: 50rem;
-	max-height: 107rem;
-	background: rgba(255, 255, 255, 1);
-	border-radius: 10px;
-	align-items:center;
-	justify-content: center;
-	color: rgb(66, 66, 66);
-	box-shadow: 0 0 50px 6px #0000008c;
-}
-
-.gradient-content2{
-	padding: 3rem;
-	max-width: 45rem;
-	max-height: 47rem;
+	max-width: 54.2rem;
+	max-height: 67rem;
 	background: rgba(255, 255, 255, 1);
 	border-radius: 10px;
 	align-items:center;
@@ -241,8 +232,8 @@ hr {
 }
 
 .content4{
-	padding-left: 6rem;
-	padding-right: 6rem;
+	padding-top: 1rem;
+	font-size: 1rem;
 	align-items:center;
 	justify-content: space-between;
 	display: flex;
@@ -278,16 +269,7 @@ img{
 	align-items: center;
 }
 
-.image3{
-	width: 100%;
-	height: 100%;	
-	scale: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-header .content h4{
+.content h4{
 	color: #333333;
 	justify-content: center;
 	display: flex;
@@ -295,35 +277,35 @@ header .content h4{
 	transition: all 0.3s ease;
 }
 
-header .content h4:hover{
+.content h4:hover{
 	color: #35898b;
 	justify-content: center;
 	display: flex;
 	font-size: 1.3rem;
 }
 
-header .content h3{
+.content h3{
 	color: #333333;
 	justify-content: center;
 	display: flex;
 	font-size: 2rem;
 }
 
-header .content h1{
+.content h1{
 	color: #333333;
 	font-size: 5rem;
 	justify-content: center;
 	display: flex;
 }
 
-header .content h2{
+.content h2{
 	color: #333333;
 	font-size: 3rem;
 	justify-content: center;
 	display: flex;
 }
 
-header .content a{
+.content a{
 	color: #333333;
 	font-size: 1.3rem;
 	font-weight: 1;
@@ -331,7 +313,7 @@ header .content a{
 	display: flex;
 }
 
-header .content2 a{
+.content2 a{
 	color: #ffffff;
 	font-size: 1.5rem;
 	font-weight: 1;
@@ -339,7 +321,7 @@ header .content2 a{
 	display: flex;
 }
 
-header .content3 a{
+.content3 a{
 	color: #3a3a3a;
 	font-size: 1.2rem;
 	font-weight: 1;
@@ -347,7 +329,7 @@ header .content3 a{
 	display: flex;
 }
 
-header .content4 a{
+.content4 a{
 	color: #3a3a3a;
 	font-size: 1.3rem;
 	font-weight: 1;
@@ -355,24 +337,42 @@ header .content4 a{
 	display: flex;
 }
 
-.blur{
-	box-shadow: 0 0 19000px 40px #45a7a7c0;
-	animation: fadeIn2 1s ease-in-out forwards;
+.content5 a{
+	color: #678882;
+	font-size: 1.5rem;
+    font-style:oblique;
+	font-weight: 1;
+	display: flex;
+	align-items: center;
+	padding: 1.5rem;
+	text-shadow: 0 0 50px 6px #0000008c;
 }
 
-@keyframes fadeIn2 {
-    0% 
-    {
-		margin-top: 28rem;
-    }
-	50% 
-    {
-		margin-top: 28rem;
-    }
-    100% 
-    {
-		margin-top: 6rem;
-    }
+.content6 a{
+    content: "";
+	border-radius: 20rem;
+	background-color: #c4c4c4;
+	transition: all 0.3s ease;
+    height: 2rem;
+	width: 100%;
+}
+
+.content7 a{
+    content: "";
+	border-radius: 20rem;
+	background-color: #678882;
+	transition: all 0.3s ease;
+    margin-top: -2rem;
+    height: 2rem;
+	width: 7%;
+}
+
+.nav-btn{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
 }
 
 .box div{
