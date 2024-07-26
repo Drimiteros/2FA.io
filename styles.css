@@ -30,13 +30,16 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     color: #E0E0E0;
     max-width: 25rem;
+    font-size: 1rem;
 }
 
 .container3 p {
     color: rgb(254, 255, 185);
     font-size: 0.7rem;
-	display: flex;
-    justify-content: space-between;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
 }
 
 .container3 b {
@@ -55,9 +58,9 @@ input {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 2px solid #444;
+    border: 2px solid #2C2C2C;
     background-color: #2C2C2C;
-    color: #E0E0E0;
+    color: #ffffff;
     width: calc(100% - 24px);
 }
 
@@ -75,7 +78,7 @@ button {
 
 button:hover {
     height: 60px;
-    width: 200px;
+    width: 160px;
     padding: 0.1rem 0.5rem;
     border-radius: 10px;
     cursor: pointer;
@@ -86,6 +89,7 @@ button:hover {
     background-color: #00fdfd;
     border-color: #00fdfd;
     border-width: 0.3rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 #result {
