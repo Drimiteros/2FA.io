@@ -60,7 +60,7 @@ function getValidTime() {
     // Update progress bar
     const progressBar = document.getElementById('progressBar');
     const progressBar2 = document.getElementById('progressBarContainer');
-    const progressWidth = (currentSecond / 60) * 100; // Calculate width percentage
+    const progressWidth = ((currentSecond + 1) / 60) * 100; // Calculate width percentage
     progressBar.style.width = `${progressWidth}%`;
     progressBarContainer.style.width = `${100}%`;
     
