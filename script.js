@@ -6,84 +6,8 @@ document.addEventListener('keydown', event => {
     }
 });
 
-// Save ID to IndexedDB
-function saveIDToIndexedDB(ID) {
-    const request = indexedDB.open("IDDatabase", 1);
-
-    request.onupgradeneeded = function(event) {
-        const db = event.target.result;
-        if (!db.objectStoreNames.contains("IDs")) {
-            db.createObjectStore("IDs", { keyPath: "id" });
-        }
-    };
-
-    request.onsuccess = function(event) {
-        const db = event.target.result;
-        const transaction = db.transaction(["IDs"], "readwrite");
-        const objectStore = transaction.objectStore("IDs");
-        const requestUpdate = objectStore.put({ id: "verificationID", value: ID });
-        requestUpdate.onerror = function(event) {
-            console.log("Error updating ID in IndexedDB");
-        };
-        requestUpdate.onsuccess = function(event) {
-            console.log("ID successfully updated in IndexedDB");
-        };
-    };
-
-    request.onerror = function(event) {
-        console.log("Error opening IndexedDB");
-    };
-}
-
-// Retrieve ID from IndexedDB
-function getIDFromIndexedDB(callback) {
-    const request = indexedDB.open("IDDatabase", 1);
-
-    request.onsuccess = function(event) {
-        const db = event.target.result;
-        const transaction = db.transaction(["IDs"], "readonly");
-        const objectStore = transaction.objectStore("IDs");
-        const requestGet = objectStore.get("verificationID");
-
-        requestGet.onerror = function(event) {
-            console.log("Error retrieving ID from IndexedDB");
-        };
-
-        requestGet.onsuccess = function(event) {
-            if (requestGet.result) {
-                const ID = requestGet.result.value;
-                document.getElementById('idInfo').innerText = `Your ID: ${ID}`; // Display existing ID
-                if (callback) callback(true, ID);
-            } else {
-                console.log("No ID found in IndexedDB");
-                document.getElementById('idInfo').innerText = "No ID found."; // Display if no ID found
-                if (callback) callback(false, null);
-            }
-        };
-    };
-
-    request.onerror = function(event) {
-        console.log("Error opening IndexedDB");
-        if (callback) callback(false, null);
-    };
-}
-
-// Check if ID exists and generate if not
-function checkAndGenerateID(ID, callback) {
-    console.log(`Checking and generating ID with initial ID: ${ID}`);
-    getIDFromIndexedDB(function(IDExists, existingID) {
-        if (!IDExists) {
-            saveIDToIndexedDB(ID);
-            document.getElementById('idInfo').innerText = `Your ID: ${ID}`; // Display newly generated ID
-        } else {
-            document.getElementById('idInfo').innerText = `Your ID: ${existingID}`;
-        }
-        if (callback) callback();
-    });
-}
-
 // GENERATE A UNIQUE KEY
-function getBrowserAndOS(callback) {
+function getBrowserAndOS() {
     const userAgent = navigator.userAgent;
     let browserName = "Unknown Browser";
     let ID = 0;
@@ -131,12 +55,6 @@ function getBrowserAndOS(callback) {
         osName = "iOS";
         ID += 6;
     }
-
-    document.getElementById('browserInfo').innerText = `Browser: ${browserName}`;
-    document.getElementById('osInfo').innerText = `Operating System: ${osName}`;
-
-    // Check if ID exists and generate if not
-    checkAndGenerateID(ID, callback);
 }
 
 // If "Get key" button is pressed, trigger the generate string function
