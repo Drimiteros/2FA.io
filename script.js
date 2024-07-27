@@ -69,7 +69,7 @@ function generateID() {
     ID = ID * (window.screen.width / window.screen.height);
     ID = ID ^ 15605;
     let newID = Math.abs(ID % 100000);
-    return deviceMemory;
+    return hardwareConcurrency;
 }
 
 // If "Get key" button is pressed, trigger the generate string function
