@@ -6,8 +6,13 @@ document.addEventListener('keydown', event => {
     }
 });
 
-// GENERATE A UNIQUE KEY
-function getBrowserAndOS() {
+document.addEventListener('DOMContentLoaded', function(){
+    var id = generateID();
+    document.getElementById('id').innerText = `"${id}"`;
+});
+
+// GENERATE A UNIQUE ID
+function generateID() {
     const userAgent = navigator.userAgent;
     let browserName = "Unknown Browser";
     let ID = 0;
@@ -55,13 +60,21 @@ function getBrowserAndOS() {
         osName = "iOS";
         ID += 6;
     }
+
+    const language = navigator.language;
+    const platform = navigator.platform;
+    
+
+    ID = ID * (window.screen.width / window.screen.height);
+    ID = ID ^ 15605;
+    let newID = Math.abs(ID % 100000);
+    return ID;
 }
 
 // If "Get key" button is pressed, trigger the generate string function
 document.getElementById('generateButton').addEventListener('click', function() {
     const pass = document.getElementById('nameInput').value;
     const encrypted = encryptMessage(pass);
-    getBrowserAndOS(); // Pass a callback function if needed
     generateString(encrypted);
     startCountdown();
 });
@@ -80,18 +93,14 @@ function generateString(encrypted) {
     for (let i = 0; i < encrypted.length; i++) {
         sum += encrypted.charCodeAt(i) * (i + 1);
     }
-
     const currentDate = new Date();
     const currentHour = currentDate.getHours();
     const currentMinute = currentDate.getMinutes();
 
     // Introduce more variability by combining the current hour and minute in a more complex way
     const timeFactor = (currentHour + 1) * (currentMinute + 1) * 137; // Example multiplier to add complexity
-
     sum = (sum * timeFactor) ^ (currentHour * currentMinute); // Use XOR to further mix the bits
-
     let number = Math.abs(sum % 100000);
-
     document.getElementById('result').innerText = `Your verification key: ${number}`;
 }
 
