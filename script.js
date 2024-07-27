@@ -63,12 +63,13 @@ function generateID() {
 
     const language = navigator.language;
     const platform = navigator.platform;
-
+    const deviceMemory = navigator.deviceMemory;
+    const hardwareConcurrency = navigator.hardwareConcurrency;
 
     ID = ID * (window.screen.width / window.screen.height);
     ID = ID ^ 15605;
     let newID = Math.abs(ID % 100000);
-    return platform;
+    return deviceMemory;
 }
 
 // If "Get key" button is pressed, trigger the generate string function
