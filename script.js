@@ -61,15 +61,15 @@ function generateID() {
         ID += 6;
     }
 
-    const language = navigator.language;
-    const platform = navigator.platform;
+    const language = navigator.language.length;
+    const platform = navigator.platform.length;
     const deviceMemory = navigator.deviceMemory;
     const hardwareConcurrency = navigator.hardwareConcurrency;
 
-    ID = ID * (window.screen.width / window.screen.height);
+    ID = ID * (window.screen.width / window.screen.height) * (platform / deviceMemory) * hardwareConcurrency;
     ID = ID ^ 15605;
     let newID = Math.abs(ID % 100000);
-    return hardwareConcurrency;
+    return newID;
 }
 
 // If "Get key" button is pressed, trigger the generate string function
